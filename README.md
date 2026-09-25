@@ -34,11 +34,44 @@ Which product categories generate the most returns, and is it worth acting on?
 > revenue. The derived `line_total` is transaction revenue, not profit, because
 > the source data does not include product cost.
 
+
 ## How to run
-1. Download `Online Retail.xlsx` from the Source 1 URL and `online_retail_II.xlsx` from the Source 2 URL into `data/raw/` (this folder is git-ignored; do not commit the raw files or upload them to Blackboard — link to the URLs above instead).
-2. `pip install -r requirements.txt`
-3. Open `notebooks/D2_OnlineRetail_DataEngineering_Starter.ipynb` and run all cells top to bottom.
-4. Output appears in `data/processed/`: `working_dataset.csv`, `data_profile.csv`, `cleaning_log.csv`.
+This repo does **not** store the raw datasets or the full merged dataset in git —
+both are reproducible, so committing them would only bloat the repo and force a
+Git LFS quota for no benefit.
+
+**1. Download the two raw files** and place them in `data/raw/` (create the folder
+if it doesn't exist), keeping these exact names:
+
+| File | Source |
+|---|---|
+| `Online Retail.xlsx` | https://archive.ics.uci.edu/dataset/352/online+retail |
+| `online_retail_II.xlsx` | https://archive.ics.uci.edu/dataset/502/online+retail+ii |
+
+Both are published by the UCI Machine Learning Repository under CC BY 4.0, which
+permits use for study and research.
+
+**2. Install Python:** https://www.python.org/ftp/python/pymanager/python-manager-26.3.msix
+
+**3. Remember:** Check the "Add python.exe to PATH" box during the installation process.
+
+**4. Change directory in Terminal** to the folder where you save the notebook.
+
+**5. Then type:** `pip install -r requirements.txt`.
+
+**6. Run the notebook top to bottom.** It will regenerate, locally:
+- `data/processed/working_dataset.csv` — the full cleaned/merged dataset
+- `data/processed/data_profile.csv` — committed to the repo
+- `data/processed/cleaning_log.csv` — committed to the repo
+- `data/processed/working_dataset_sample.csv` — a 2,000-row sample, committed to
+  the repo so a reader can inspect the schema without downloading anything
+
+`data/raw/` and `working_dataset.csv` are listed in `.gitignore` so they're
+never accidentally committed. `RANDOM_SEED = 42` is fixed at the top of the
+notebook, so re-running it reproduces the same sample and the same numbers
+reported in the analysis.
+
+**7. Output appears in:** `data/processed/`: `working_dataset.csv`, `data_profile.csv`, `cleaning_log.csv`.
 
 ## Random seed
 `RANDOM_SEED = 42`, set at the top of every notebook, used wherever sampling or splitting occurs.
