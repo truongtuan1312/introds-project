@@ -1,0 +1,6 @@
+action,reason,rows_before,rows_after
+rename columns on Online Retail II to match Online Retail (352) schema,"Invoice->InvoiceNo, Price->UnitPrice, 'Customer ID'->CustomerID so the two tables can be concatenated",1067371,1067371
+"concat(online_retail_I, online_retail_II) then drop_duplicates on common transaction columns","Both datasets cover overlapping dates (same retailer); dropped 576,244 duplicate transactions from the overlap, keeping the first (Online Retail 352) copy",1609280,1033036
+derive is_cancellation from InvoiceNo prefix 'C',"Cancelled invoices are a documented convention in this dataset; kept as a flag rather than dropped, since they carry signal",1033036,1033036
+note missing CustomerID (not dropped yet),"235,151 rows have no CustomerID; decide with your Data Analyst whether these are excluded from customer-level analysis or kept for product-level analysis",1033036,1033036
+to_datetime(InvoiceDate),Needed as datetime for any time-based analysis,1033036,1033036

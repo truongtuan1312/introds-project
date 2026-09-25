@@ -1,0 +1,17 @@
+table,column,dtype,missing_count,missing_pct,min,max
+online_retail_I,InvoiceNo,object,0,0.0,,
+online_retail_I,StockCode,object,0,0.0,,
+online_retail_I,Description,object,1454,0.27,,
+online_retail_I,Quantity,int64,0,0.0,-80995.0,80995.0
+online_retail_I,InvoiceDate,datetime64[us],0,0.0,,
+online_retail_I,UnitPrice,float64,0,0.0,-11062.06,38970.0
+online_retail_I,CustomerID,float64,135080,24.93,12346.0,18287.0
+online_retail_I,Country,str,0,0.0,,
+online_retail_II,Invoice,object,0,0.0,,
+online_retail_II,StockCode,object,0,0.0,,
+online_retail_II,Description,object,4382,0.41,,
+online_retail_II,Quantity,int64,0,0.0,-80995.0,80995.0
+online_retail_II,InvoiceDate,datetime64[us],0,0.0,,
+online_retail_II,Price,float64,0,0.0,-53594.36,38970.0
+online_retail_II,Customer ID,float64,243007,22.77,12346.0,18287.0
+online_retail_II,Country,str,0,0.0,,
