@@ -34,6 +34,14 @@ Which product categories generate the most returns, and is it worth acting on?
 > revenue. The derived `line_total` is transaction revenue, not profit, because
 > the source data does not include product cost.
 
+> The source data has no product `Category` column. The D2 notebook derives one
+> from `Description` using ordered keyword rules (for example, mugs and cups map
+> to Kitchen & Dining, while candles map to Home Decor). This is a heuristic
+> grouping, not an official product taxonomy; unmatched descriptions are labeled
+> `Other / Unclassified`, and the first matching rule wins. For return analysis,
+> negative `Quantity` values indicate returned/reversed quantities; invoices
+> marked as cancellations are tracked separately by `is_cancellation`.
+
 
 ## How to run
 This repo does **not** store the raw datasets or the full merged dataset in git —
@@ -64,7 +72,8 @@ permits use for study and research.
 - `data/processed/data_profile.csv` — committed to the repo
 - `data/processed/cleaning_log.csv` — committed to the repo
 - `data/processed/working_dataset_sample.csv` — a 2,000-row sample, committed to
-  the repo so a reader can inspect the schema without downloading anything
+  the repo so a reader can inspect the schema, including the derived `Category`,
+  without downloading anything
 
 `data/raw/` and `working_dataset.csv` are listed in `.gitignore` so they're
 never accidentally committed. `RANDOM_SEED = 42` is fixed at the top of the
