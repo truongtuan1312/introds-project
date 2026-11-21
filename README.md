@@ -85,7 +85,7 @@ reported in the analysis.
 # D3 – Data Analysis: Return Rates by Product Category
 
 ## 1. Overview
-This notebook (`D3_analysis.ipynb`) contains the core data analysis for our project. The objective is to answer the decision question: **"Which product categories generate the most returns, and is it worth acting on?"** 
+This notebook (`D3_Topic12_DangUyenThu_TruongThuanTuan_NguyenAnKhoi_NguyenThiKhanhLinh_NguyenChiPhuc_DangLeTrucLinh.ipynb`) contains the core data analysis for our project. The objective is to answer the decision question: **"Which product categories generate the most returns, and is it worth acting on?"** 
 
 The analysis is performed by the **Data Analyst (Nguyen An Khoi)**. It covers the analytical pipeline from loading the pre-processed data, executing strict cleaning protocols (handling extreme outliers), calculating descriptive statistics (Return Rate by Line, Return Rate by Value, Excess Return Value), performing a Chi-square test of independence, and finally exporting the processed results for the Visualisation Lead.
 
@@ -114,7 +114,7 @@ Download the two original datasets directly from the UCI Machine Learning Reposi
 * **Source 2:** [Online Retail II (Dataset 502)](https://archive.ics.uci.edu/dataset/502/online+retail+ii) $\rightarrow$ Download the `.xlsx` file.
 
 ### Step 3.2: Convert Excel to CSV
-The notebook `D3_analysis.ipynb` reads CSV files, not Excel files. You need to convert them:
+The notebook `D3_Topic12_DangUyenThu_TruongThuanTuan_NguyenAnKhoi_NguyenThiKhanhLinh_NguyenChiPhuc_DangLeTrucLinh.ipynb` reads CSV files, not Excel files. You need to convert them:
 1. Open the downloaded `Online Retail.xlsx` file using Microsoft Excel (or Google Sheets).
 2. Go to **File** $\rightarrow$ **Save As** (or **Export**).
 3. Choose the format: `CSV (Comma delimited) (*.csv)`.
@@ -139,7 +139,7 @@ introds-project/
 │   │   └── retail2.csv    <-- YOU MUST PLACE THIS HERE
 │   └── processed/         <-- Notebook will save outputs here automatically
 ├── notebooks/
-│   └── D3_analysis.ipynb  <-- YOU WILL RUN THIS FILE
+│   └── D3_Topic12_DangUyenThu_TruongThuanTuan_NguyenAnKhoi_NguyenThiKhanhLinh_NguyenChiPhuc_DangLeTrucLinh.ipynb  <-- YOU WILL RUN THIS FILE
 ├── requirements.txt
 └── README.md
 ```
@@ -147,7 +147,7 @@ introds-project/
 
 ### Step 4.1: Open the Notebook
 1. Open the project folder in VS Code or launch Jupyter Notebook.
-2. Navigate to `notebooks/D3_analysis.ipynb` and open it.
+2. Navigate to `notebooks/D3_Topic12_DangUyenThu_TruongThuanTuan_NguyenAnKhoi_NguyenThiKhanhLinh_NguyenChiPhuc_DangLeTrucLinh.ipynb` and open it.
 
 ### Step 4.2: Select the Kernel
 If using VS Code, click on the **"Select Kernel"** button in the top right corner and choose your installed Python 3 environment.
